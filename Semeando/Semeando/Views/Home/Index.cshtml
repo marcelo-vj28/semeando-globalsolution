@@ -18,8 +18,6 @@
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Ranking</th>
-                <th>Streak</th>
-                <th>Bio</th>
             </tr>
         </thead>
         <tbody id="usuarioData">
@@ -62,40 +60,6 @@
     </table>
 </div>
 
-<div id="consulta-opcao" class="page">
-    <h1>Consulta de Opções</h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID Pergunta</th>
-                <th>ID Opção</th>
-                <th>Texto da Opção</th>
-                <th>Opção Correta</th>
-            </tr>
-        </thead>
-        <tbody id="opcaoData">
-            <!-- Dados serão inseridos via JavaScript -->
-        </tbody>
-    </table>
-</div>
-
-<div id="consulta-resposta" class="page">
-    <h1>Consulta de Opção Correta</h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID Resposta</th>
-                <th>ID Usuário</th>
-                <th>ID Pergunta</th>
-                <th>Opção Escolhida</th>
-            </tr>
-        </thead>
-        <tbody id="userData">
-            <!-- Dados serão inseridos via JavaScript -->
-        </tbody>
-    </table>
-</div>
-
 <!-- Cadastros-->
 <div id="cadastro-usuario" class="page">
     <h1>Cadastro de Usuário</h1>
@@ -118,16 +82,6 @@
                 <option value="C">C</option>
                 <option value="D">D</option>
             </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="streak" class="form-label">Streak:</label>
-            <input type="number" class="form-control" id="streak" name="streak" value="0" min="0">
-        </div>
-
-        <div class="mb-3">
-            <label for="bio" class="form-label">Bio:</label>
-            <textarea class="form-control" id="bio" name="bio" maxlength="255" rows="4"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" onclick="submitForm()">Cadastrar</button>
@@ -167,35 +121,6 @@
         <div class="mb-3">
             <label for="tipo-pergunta" class="form-label">Tipo:</label>
             <input type="text" class="form-control" id="tipo-pergunta" name="tipo-pergunta" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary" onclick="submitForm()">Cadastrar</button>
-    </form>
-</div>
-
-<div id="cadastro-opcao" class="page">
-    <h1>Cadastro de Opção</h1>
-    <form id="optionsForm" onsubmit="return false;" class="needs-validation" novalidate>
-        <div class="mb-3">
-            <label for="opcao" class="form-label">Nova opção:</label>
-            <input type="text" class="form-control" id="opcao" name="opcao" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="opcao-correta" class="form-label">Opção correta:</label>
-            <input type="text" class="form-control" id="opcao-correta" name="opcao-correta" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary" onclick="submitForm()">Cadastrar</button>
-    </form>
-</div>
-
-<div id="cadastro-resposta" class="page">
-    <h1>Cadastro de Resposta</h1>
-    <form id="answersForm" onsubmit="return false;" class="needs-validation" novalidate>
-        <div class="mb-3">
-            <label for="resposta" class="form-label">Opção Escolhida:</label>
-            <input type="text" class="form-control" id="resposta" name="resposta" required>
         </div>
 
         <button type="submit" class="btn btn-primary" onclick="submitForm()">Cadastrar</button>

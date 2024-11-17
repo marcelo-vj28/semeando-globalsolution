@@ -20,81 +20,97 @@ function showPage(pageId) {
     ).classList.add('active');
 }
 
-// Dados mockados para a tabela
-const mockData = {
-    usuarios: [
-        { idUsuario: 1, nome: "João Silva", email: "joao@email.com", ranking: "A", streak: 5, bio: "Dev" },
-        { idUsuario: 2, nome: "Maria Santos", email: "maria@email.com", ranking: "B", streak: 3, bio: "Dev" }
-    ],
-    levels: [
-        { idLevel: 1, titulo: "", descricao: "Introdução", dificuldade: "Iniciante" },
-        { idLevel: 2, titulo: "Médio", descricao: "Médio", dificuldade: "Intermediário" }
-    ],
-    perguntas: [
-        { idPergunta: 1, idLevel: 1, textoPergunta: "O que é sustentabilidade?", tipoPergunta: "Múltipla Escolha" },
-        { idPergunta: 2, idLevel: 2, textoPergunta: "Como implementar energia sustentável?", tipoPergunta: "Múltipla Escolha" }
-    ],
-    opcoes: [
-        { idPergunta: 1, idOpcao: 1, textoOpcao: "A", opcaoCorreta: true },
-        { idPergunta: 1, idOpcao: 2, textoOpcao: "B", opcaoCorreta: false }
-    ]
-};
-
-// Popula a tabela com os dados mockados
-function populateTable() {
-    const tbody = document.getElementById('userData');
-    tbody.innerHTML = mockData.map(user => `
+// Popula a tabela de usuários
+function populateUsersTable() {
+    const tbody = document.getElementById('usersData');
+    tbody.innerHTML = mockData.usuarios.map(user => `
         <tr>
-            <td>${user.id}</td>
+            <td>${user.idUsuario}</td>
             <td>${user.nome}</td>
             <td>${user.email}</td>
             <td>${user.ranking}</td>
-            <td>${user.streak}</td>
-            <td>${user.bio}</td>
         </tr>
     `).join('');
 }
 
-// Manipulação do formulário
-function submitForm() {
+// Popula a tabela de levels
+function populateLevelsTable() {
+    const tbody = document.getElementById('levelsData');
+    tbody.innerHTML = mockData.levels.map(level => `
+        <tr>
+            <td>${level.idLevel}</td>
+            <td>${level.titulo || 'N/A'}</td>
+            <td>${level.descricao}</td>
+            <td>${level.dificuldade}</td>
+        </tr>
+    `).join('');
+}
+
+// Popula a tabela de perguntas
+function populateQuestionsTable() {
+    const tbody = document.getElementById('questionsData');
+    tbody.innerHTML = mockData.perguntas.map(question => `
+        <tr>
+            <td>${question.idPergunta}</td>
+            <td>${question.idLevel}</td>
+            <td>${question.textoPergunta}</td>
+            <td>${question.tipoPergunta}</td>
+        </tr>
+    `).join('');
+}
+
+// Manipulação do formulário de usuários
+function submitUserForm(event) {
+    event.preventDefault();
+
     const form = document.getElementById('userForm');
-    
+
     if (!form.checkValidity()) {
-        event.preventDefault();
         event.stopPropagation();
         form.classList.add('was-validated');
         return;
     }
 
     const formData = {
+        idUsuario: mockData.usuarios.length + 1,
         nome: document.getElementById('nome').value,
         email: document.getElementById('email').value,
         ranking: document.getElementById('ranking').value,
-        streak: document.getElementById('streak').value,
-        bio: document.getElementById('bio').value
     };
 
-    // Aqui você adicionaria a lógica para enviar os dados para o backend
-    console.log('Form submitted:', formData);
+    mockData.usuarios.push(formData);
+    populateUsersTable();
+
     alert('Usuário cadastrado com sucesso!');
     form.reset();
     form.classList.remove('was-validated');
 }
 
 // Inicialização
-document.addEventListener('DOMContentLoaded', function() {
-    // Popula a tabela inicial
-    populateTable();
+document.addEventListener('DOMContentLoaded', function () {
+    // Popula as tabelas iniciais
+    populateUsersTable();
+    populateLevelsTable();
+    populateQuestionsTable();
 
-    // Adiciona validação do Bootstrap aos formulários
-    const forms = document.querySelectorAll('.needs-validation');
-    Array.prototype.slice.call(forms).forEach(function(form) {
-        form.addEventListener('submit', function(event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
+    // Adiciona validação e evento ao formulário de usuários
+    const userForm = document.getElementById('userForm');
+    userForm.addEventListener('submit', submitUserForm, false);
 });
+
+// Mock de dados
+const mockData = {
+    usuarios: [
+        { idUsuario: 1, nome: "João Silva", email: "joao@email.com", ranking: "A" },
+        { idUsuario: 2, nome: "Maria Santos", email: "maria@email.com", ranking: "B" },
+    ],
+    levels: [
+        { idLevel: 1, titulo: "", descricao: "Introdução", dificuldade: "Iniciante" },
+        { idLevel: 2, titulo: "Médio", descricao: "Médio", dificuldade: "Intermediário" },
+    ],
+    perguntas: [
+        { idPergunta: 1, idLevel: 1, textoPergunta: "O que é sustentabilidade?", tipoPergunta: "Múltipla Escolha" },
+        { idPergunta: 2, idLevel: 2, textoPergunta: "Como implementar energia sustentável?", tipoPergunta: "Múltipla Escolha" },
+    ],
+};
+

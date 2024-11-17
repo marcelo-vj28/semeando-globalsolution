@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Semeando.Application.Dtos;
 using Semeando.Domain.Entities;
 using Semeando.Domain.Interfaces;
 using Semeando.Infrastructure.Data.AppData;
@@ -46,6 +47,16 @@ namespace Semeando.Infrastructure.Data.Repositories
                 _context.Levels.Remove(level);
                 _context.SaveChanges();
             }
+        }
+
+        public void Create(LevelDto levelDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(LevelDto levelDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

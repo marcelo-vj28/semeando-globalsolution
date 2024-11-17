@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|c:\\users\\live_\\onedrive\\\u00E1rea de trabalho\\semeando\\semeando\\semeando\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|solutionrelative:semeando\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|c:\\users\\live_\\onedrive\\\u00E1rea de trabalho\\semeando\\semeando\\semeando\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|solutionrelative:semeando\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|c:\\users\\live_\\onedrive\\\u00E1rea de trabalho\\semeando\\semeando\\semeando\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD5DE038-0B1B-48CA-8A34-CD8BBC95E71A}|Semeando\\Semeando.csproj|solutionrelative:semeando\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Semeando\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Semeando\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-17T21:54:42.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Semeando\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Semeando\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T19:17:03.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Semeando\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\live_\\OneDrive\\\u00C1rea de Trabalho\\Semeando\\Semeando\\Semeando\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Semeando\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T19:14:44.451Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
