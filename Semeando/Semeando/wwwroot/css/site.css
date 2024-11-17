@@ -1,0 +1,113 @@
+/* Estilos gerais */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* Estilos do menu lateral */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    min-height: calc(100vh - 180px);
+}
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+    }
+
+.menu-item, .menu-subitem {
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #495057;
+}
+
+    .menu-item:hover, .menu-subitem:hover {
+        background-color: #e9ecef;
+    }
+
+    .menu-item.active, .menu-subitem.active {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+.cadastro-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submenu {
+    padding-left: 20px;
+}
+
+.menu-subitem {
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+/* Estilos do conteúdo */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+    .page.active {
+        display: block;
+    }
+
+/* Estilos do footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #f8f9fa;
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
